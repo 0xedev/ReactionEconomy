@@ -13,7 +13,7 @@ remappings = [
     "@uniswap/v2-core/=lib/v2-core/",
     "@uniswap/v2-periphery/=lib/v2-periphery/",
     "forge-std/=lib/forge-std/src/",
-    "solmate/=lib/universal-router/lib/solmate/",
+    "solmate/=lib/solmate/",
 ]
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options

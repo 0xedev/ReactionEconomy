@@ -91,6 +91,8 @@ contract MockSwapRouter {
         shouldFail = _shouldFail;
     }
     
+    receive() external payable {}
+
     fallback() external payable {
         if (shouldFail) {
             revert("Swap failed");
@@ -145,7 +147,7 @@ contract ReactionEconomyTest is Test {
         usdc.approve(address(reactionEconomy), type(uint256).max);
     }
     
-    function test_constructor() public {
+    function test_constructor() public view{
         assertEq(address(reactionEconomy.usdc()), address(usdc));
         assertEq(reactionEconomy.owner(), contractOwner);
         assertEq(reactionEconomy.defaultDailyLimit(), 1000 * 10**6);
